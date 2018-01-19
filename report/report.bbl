@@ -1,0 +1,49 @@
+\begin{thebibliography}{7}
+\providecommand{\natexlab}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem[{\textit{{Cravens}}(1997)}]{Cravens97}
+{Cravens}, T.~E. (1997), \textit{{Physics of Solar System Plasmas}}, Cambridge
+  University Press, Cambridge, UK.
+
+\bibitem[{\textit{Kuznetsov and Suvorova}(1998)}]{Kuznetsov98}
+Kuznetsov, S., and A.~Suvorova (1998), An empirical model of the magnetopause
+  for broad ranges of solar wind pressure and bz imf, in \textit{Polar Cap
+  Boundary Phenomena}, \textit{NATO ASI Series}, vol. 509, edited by J.~Moen,
+  A.~Egeland, and M.~Lockwood, pp. 51--61, Springer Netherlands,
+  \doi{10.1007/978-94-011-5214-3_5}.
+
+\bibitem[{\textit{Petrinec and Russell}(1993)}]{Petrinec93}
+Petrinec, S.~M., and C.~T. Russell (1993), An empirical model of the size and
+  shape of the near-earth magnetotail, \textit{Geophysical Research Letters},
+  \textit{20}(23), 2695--2698, \doi{10.1029/93GL02847}.
+
+\bibitem[{\textit{Roelof and Sibeck}(1993)}]{Roelof98}
+Roelof, E.~C., and D.~G. Sibeck (1993), Magnetopause shape as a bivariate
+  function of interplanetary magnetic field bz and solar wind dynamic pressure,
+  \textit{Journal of Geophysical Research: Space Physics}, \textit{98}(A12),
+  21,421--21,450, \doi{10.1029/93JA02362}.
+
+\bibitem[{\textit{Shue et~al.}(1997)\textit{Shue, Chao, Fu, Russell, Song,
+  Khurana, and Singer}}]{Shue97}
+Shue, J.-H., J.~K. Chao, H.~C. Fu, C.~T. Russell, P.~Song, K.~K. Khurana, and
+  H.~J. Singer (1997), A new functional form to study the solar wind control of
+  the magnetopause size and shape, \textit{Journal of Geophysical Research:
+  Space Physics}, \textit{102}(A5), 9497--9511, \doi{10.1029/97JA00196}.
+
+\bibitem[{\textit{Shue et~al.}(1998)}]{Shue98}
+Shue, J.-H., et~al. (1998), Magnetopause location under extreme solar wind
+  conditions, \textit{Journal of Geophysical Research: Space Physics},
+  \textit{103}(A8), 17,691--17,700, \doi{10.1029/98JA01103}.
+
+\bibitem[{\textit{Shue et~al.}(2000)\textit{Shue, Song, Russell, Chao, and
+  Yang}}]{Shue00}
+Shue, J.-H., P.~Song, C.~T. Russell, J.~K. Chao, and Y.-H. Yang (2000), Toward
+  predicting the position of the magnetopause within geosynchronous orbit,
+  \textit{Journal of Geophysical Research: Space Physics}, \textit{105}(A2),
+  2641--2656, \doi{10.1029/1999JA900467}.
+
+\end{thebibliography}

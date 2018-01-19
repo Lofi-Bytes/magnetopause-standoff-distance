@@ -1,0 +1,12 @@
+  FORMAT OF THE SUBSETTED FILE
+    
+    ITEMS                      FORMAT   
+     
+ 1 Year                          I4        
+ 2 Day                           I4        
+ 3 Hour                          I3        
+ 4 Minute                        I3        
+ 5 BZ, nT (GSE)                  F8.2      
+ 6 Flow pressure, nPa            F6.2      
+
+This file was produced by SPDF OMNIWeb Plus service
