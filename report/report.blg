@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/MacPorts 2013_5)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: report.aux
+The style file: ./bibliography/agu08.bst
+Database file #1: ./bibliography/bibliography.bib
+I was expecting a `,' or a `}'---line 1097 of file ./bibliography/bibliography.bib
+ : 
+ : @misc{Stern:2001:Online,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+You've used 7 entries,
+            3145 wiz_defined-function locations,
+            1133 strings with 10921 characters,
+and the built_in function-call counts, 8255 in all, are:
+= -- 989
+> -- 242
+< -- 6
++ -- 147
+- -- 59
+* -- 482
+:= -- 707
+add.period$ -- 7
+call.type$ -- 7
+change.case$ -- 30
+chr.to.int$ -- 8
+cite$ -- 7
+duplicate$ -- 902
+empty$ -- 441
+format.name$ -- 84
+if$ -- 1672
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 74
+newline$ -- 28
+num.names$ -- 29
+pop$ -- 354
+preamble$ -- 1
+purify$ -- 24
+quote$ -- 0
+skip$ -- 540
+stack$ -- 0
+substring$ -- 405
+swap$ -- 817
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 60
+warning$ -- 0
+while$ -- 40
+width$ -- 0
+write$ -- 89
+(There was 1 error message)

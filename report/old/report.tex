@@ -1,0 +1,472 @@
+%*************************************************************
+% Define the document properties.
+%*************************************************************
+\documentclass[12pt, letterpaper]{article}
+\usepackage[hmargin=1in,vmargin=1in]{geometry}								% For easy management of document margins and the document page size.
+\usepackage{makecell}																			% sup­ports com­mon lay­outs for tab­u­lar col­umn heads in whole doc­u­ments, based on one-col­umn tab­u­lar en­vi­ron­ment. In ad­di­tion, it can cre­ate multi-lined tab­u­lar cells.
+\usepackage{setspace}																				% Lets you change line spacing.
+\usepackage{multicol}																				% Mul­ti­col de­fines a mul­ti­cols en­vi­ron­ment which type­sets text in mul­ti­ple columns (up to a max­i­mum of 10), and (by de­fault) bal­ances the end of each col­umn at the end of the en­vi­ron­ment.
+
+
+\usepackage[font={footnotesize}, justification={justified}, tableposition={top}]{caption}		% Allows customization of appearance and placement of captions for figures, tables, etc.
+\usepackage{subcaption}																			% The pack­age pro­vides a means of us­ing fa­cil­i­ties analagous to those of the cap­tion pack­age, when writ­ing cap­tions for sub­fig­ures and the like.
+
+
+\usepackage[section]{placeins}																% De­fines a \FloatBar­rier com­mand, be­yond which floats may not pass; use­ful, for ex­am­ple, to en­sure all floats for a sec­tion ap­pear be­fore the next \sec­tion com­mand.
+\usepackage{paralist} 																				% For inline lists.
+
+
+
+
+%*************************************************************
+% Graphics and visuals.
+%*************************************************************
+\usepackage{graphicx}																			% Allows you to import graphics.
+\usepackage{subfig}
+\usepackage{tabularx}
+
+%*************************************************************
+% Math packages.
+%*************************************************************
+\usepackage{amsmath}																			% Contains the advanced math extensions for LaTeX.
+\usepackage{mathtools}																			% Math­tools is part of the mh bun­dle, which pro­vides a se­ries of pack­ages de­signed to en­hance the ap­pear­ance of doc­u­ments con­tain­ing a lot of math­e­mat­ics.
+\usepackage{mathabx} 																			% Allows for making astronomical symbols.
+\usepackage{mathrsfs}																			% Other mathematical symbols.
+
+
+
+\usepackage{csquotes}																			% Provides advanced facilities for inline and display quotations.
+\usepackage[english]{babel}																	% Provides the internationalization of LaTeX.
+
+
+
+
+%*************************************************************
+% URL's and links.
+%*************************************************************
+\usepackage{url}																						% It defines the \url{...} command. URLs often contain special characters such as '_' and '&', in order to write them you should escape them inserting a backslash, but if you write them as an argument of \url{...}, you don't need to escape any special character and it will take care of proper formatting for you. If you are using hyperref, you don't need to load url because it already provides the \url{...} command. I am keeping this in here becasuse I do not see the advantage of ALWAYS using the hyperref package at this time. I am using hyperref for the first time in this homework.
+
+
+%*************************************************************
+% Bibliogreaphy related.
+%*************************************************************
+\usepackage[nottoc,numbib]{tocbibind} 													% Force citations page to appear in the T.O.C.
+\usepackage{natbib}																				% Gives additional citation options and styles.
+\bibpunct{[} {]} {;} {a} {,} {,} 																		% Selecting citation style and punctuation.
+%\setlength{bibsep}{0.0in}
+
+%*************************************************************
+% For coloring citations/links and creating links.
+%*************************************************************
+\usepackage{hyperref} 																			% Allows for creation of hyperlinks.
+\hypersetup{
+  colorlinks=false,
+  citecolor=purple,
+  linkcolor=purple,
+  urlcolor=purple}
+
+%*************************************************************
+% For text highlighting various colors.
+%*************************************************************
+\usepackage{soul}
+\usepackage{color}
+\usepackage[usenames,dvipsnames]{xcolor}
+\newcommand{\hlc}[2][yellow]{ {\sethlcolor{#1} \hl{#2}} }
+
+% Uses: This is a text. \hlc[yellow]{And this is highlighted with color yellow}. \hlc[green]{Then with color green}, \hlc[CarnationPink]{and then with color pink}. Or you can also use \hlc[Dandelion]{Dandelion}, or \hlc[SeaGreen]{seagreen}, or anything as described in \hlc[Peach]{http://en.wikibooks.org/wiki/LaTeX/Colors}
+
+%\hl{this is some highlighted text}
+%\hl{\emph{some text}}
+%\textcolor{cyan}{text} 
+%\textcolor{pink}{text}
+
+%*************************************************************
+% Add line numbers.
+%*************************************************************
+%\usepackage{lineno}
+%\linenumbers*[1]
+
+%*************************************************************
+% Adjustments to abstract.
+%*************************************************************
+\usepackage{abstract}
+\renewcommand{\abstractnamefont}{\color{RoyalBlue}\normalfont\normalsize\bfseries}
+%\renewcommand{\abstracttextfont}{\normalfont\small}
+%\setlength{\absleftindent}{0pt}
+%\setlength{\absrightindent}{0pt}
+
+%*************************************************************
+% Define some custom commands to make life easier.
+%*************************************************************
+\newcommand{\bslash}[0]{\textbackslash} 									% Custom command for backslash
+\newcommand{\func}[2]{$f(#1)=#2$}												% Custom command for writing a simple function.
+\newcommand{\tild}{\raise.17ex\hbox{$\scriptstyle\sim$}}			% Make a nicer looking tilde.
+%\newcommand{\degree}{\ensuremath{^\circ}}								% Make the "degree" symbol.
+
+%*************************************************************
+% Make vectors look better.
+%*************************************************************
+%\let\oldhat\hat
+%\renewcommand{\vec}[1]{\mathbf{#1}}
+%\renewcommand{\hat}[1]{\oldhat{\mathbf{#1}}}
+% I use these sometimes, depending on how I want my math to appear. 
+
+%*************************************************************
+% Allow for adjustment of spacing on titles and headers.
+%*************************************************************
+\usepackage{titlesec}
+%\setcounter{secnumdepth}{5}
+%\titleformat{\paragraph}
+%{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+%\titlespacing*{\paragraph}
+%{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+%*************************************************************
+% Change the font size of the section titles.
+%*************************************************************
+\titleformat*{\section}{\normalsize\bfseries\color{RoyalBlue}}
+\titleformat*{\subsection}{\normalsize\bfseries\color{RoyalBlue}}
+\titleformat*{\subsubsection}{\normalsize\bfseries\color{RoyalBlue}}
+\titleformat*{\paragraph}{\normalsize\bfseries\color{RoyalBlue}}
+\titleformat*{\subparagraph}{\normalsize\bfseries\color{RoyalBlue}}
+
+%*************************************************************
+% Create the document.
+%*************************************************************
+\begin{document}
+
+%*************************************************************
+% Create the title.
+%*************************************************************
+\noindent \normalsize{\color{RoyalBlue}{\bf{February 28, 2014}}} \\[0.125cm]
+\noindent \normalsize{\color{RoyalBlue}{\bf{To: Mike Liemohn}}} \\[0.125cm]
+\noindent \normalsize{\color{RoyalBlue}{\bf{From: Jonathan Nickerson}}} \\[0.125cm]
+\noindent \normalsize{\color{RoyalBlue}{\bf{RE: Modeling Study \#1}}} \\
+
+%*************************************************************
+% Begin a new section.
+%*************************************************************
+\section{Introduction}
+\label{sec:1}
+a section describing the general space physics region modeled by the code,
+concluding with the question you are asking for your numerical study
+
+%*************************************************************
+% Begin a new section.
+%*************************************************************
+\section{Methodology}
+\label{sec:2}
+a section describing the equations solved by the code, the numerical
+method used in the code, and the set-up for the runs you will present
+
+%*************************************************************
+% Begin a new section.
+%*************************************************************
+\section{Results}
+\label{sec:3}
+a section presenting your simulation results and describing the main features of
+the plots that address the question you posed
+
+%*************************************************************
+% Begin a new section.
+%*************************************************************
+\section{Analysis}
+\label{sec:4}
+a section discussing your findings regarding the sensitivity of the output to the
+variations of the input conditions, and how this addresses your question
+
+%*************************************************************
+% Begin a new section.
+%*************************************************************
+\section{Conclusion}
+\label{sec:5}
+a section providing a brief recap of everything
+
+%*************************************************************
+% Begin Appendix.
+%*************************************************************
+\appendix
+%*************************************************************
+% Begin a new section.
+%*************************************************************
+\section{Tables}
+\label{sec:A}
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[!ht]
+\centering
+\label{Table 1}
+\caption{Upstream solar wind conditions (model input parameters) for each case.}
+\begin{tabular}{l c c c c c c c c} % Using the p column descriptor to allow for text wrapping in my table.
+\hline
+\rule{0pt}{4.5mm}
+\vspace{1mm}
+Case & $B_{x}$ [nT] & $B_{y}$ [nT] & $B_{z}$ [nT] & $v_{x}$ $\left[ \frac{\text{km}}{\text{s}} \right]$ & $v_{y}$ $\left[ \frac{\text{km}}{\text{s}} \right]$ & $v_{z}$ $\left[ \frac{\text{km}}{\text{s}} \right]$ & $N$ [cm$^{-1}$] & $T$ [K] \\
+\hline
+\hline
+01 & 0.0 & 0.0 & -5.0 & -400.0 & 0.0 & 0.0 & 8.0 & 200000 \\
+02 & 0.0 & 0.0 & 5.0 & -400.0 & 0.0 & 0.0 & 8.0 & 200000 \\
+03 & 0.0 & 0.0 & -5.0 & -800.0 & 0.0 & 0.0 & 8.0 & 200000 \\
+04 & 0.0 & 0.0 & 5.0 & -800.0 & 0.0 & 0.0 & 8.0 & 200000 \\
+05 & 0.0 & 0.0 & -10.0 & -400.0 & 0.0 & 0.0 & 8.0 & 200000 \\
+06 & 0.0 & 0.0 & -10.0 & -400.0 & 0.0 & 0.0 & 8.0 & 200000 \\
+07 & 0.0 & 0.0 & -0.0 & -400.0 & 0.0 & 0.0 & 8.0 & 200000 \\
+08 & 0.0 & 0.0 & 0.0 & -400.0 & 0.0 & 0.0 & 8.0 & 200000 \\
+\hline
+\end{tabular}
+\end{table}
+
+%*************************************************************
+% Begin a new section.
+%*************************************************************
+\section{Figures}
+\label{sec:B}
+
+
+
+\begin{figure}
+\def\tabularxcolumn#1{m{#1}}
+\begin{tabularx}{\linewidth}{@{}cXX@{}}
+\begin{tabular}{cc}
+\subfloat[Type description here.]{\includegraphics[width=0.49\textwidth]{./plots_&_images/1D_Bx-By-Bz/01.pdf}} 
+   & \subfloat[Type description here.]{\includegraphics[width=0.49\textwidth]{./plots_&_images/1D_Bx-By-Bz/01.pdf}}\\
+\subfloat[Type description here.]{\includegraphics[width=0.49\textwidth]{./plots_&_images/1D_Bx-By-Bz/01.pdf}} 
+   & \subfloat[Type description here.]{\includegraphics[width=0.49\textwidth]{./plots_&_images/1D_Bx-By-Bz/01.pdf}}\\
+\end{tabular}
+\end{tabularx}
+\caption{Many figures}\label{foo}
+\end{figure}
+
+
+
+
+
+
+\begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.5\textwidth}
+                \includegraphics[width=\textwidth]{./plots_&_images/1D_Bx-By-Bz/01.pdf}
+                \caption{A gull}
+                \label{fig:gull}
+        \end{subfigure}%
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad etc.
+          %(or a blank line to force the subfigure onto a new line)
+        \begin{subfigure}[b]{0.5\textwidth}
+                \includegraphics[width=\textwidth]{./plots_&_images/1D_Bx-By-Bz/02.pdf}
+                \caption{A tiger}
+                \label{fig:tiger}
+        \end{subfigure}
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad etc.
+          %(or a blank line to force the subfigure onto a new line)
+        \begin{subfigure}[b]{0.5\textwidth}
+                \includegraphics[width=\textwidth]{./plots_&_images/1D_Bx-By-Bz/03.pdf}
+                \caption{A mouse}
+                \label{fig:mouse}
+        \end{subfigure}
+        ~ %add desired spacing between images, e. g. ~, \quad, \qquad etc.
+          %(or a blank line to force the subfigure onto a new line)
+        \begin{subfigure}[b]{0.5\textwidth}
+                \includegraphics[width=\textwidth]{./plots_&_images/1D_Bx-By-Bz/04.pdf}
+                \caption{A mouse}
+                \label{fig:mouse}
+        \end{subfigure}
+        \caption{Pictures of animals}\label{fig:}
+\end{figure}
+
+
+
+
+
+
+
+\begin{figure}[!ht]
+\begin{center}
+	\includegraphics[width=0.99\textwidth]{./plots_&_images/1D_Bx-By-Bz/01.pdf}
+	\caption{.}
+	\label{fig:Bx-By-Bz_01}
+\end{center}
+\end{figure}
+\begin{figure}[!ht]
+\begin{center}
+	\includegraphics[width=0.99\textwidth]{./plots_&_images/1D_Bx-By-Bz/02.pdf}
+	\caption{.}
+	\label{fig:Bx-By-Bz_02}
+\end{center}
+\end{figure}
+\begin{figure}[!ht]
+\begin{center}
+	\includegraphics[width=0.99\textwidth]{./plots_&_images/1D_Bx-By-Bz/03.pdf}
+	\caption{.}
+	\label{fig:Bx-By-Bz_03}
+\end{center}
+\end{figure}
+\begin{figure}[!ht]
+\begin{center}
+	\includegraphics[width=0.99\textwidth]{./plots_&_images/1D_Bx-By-Bz/04.pdf}
+	\caption{.}
+	\label{fig:Bx-By-Bz_04}
+\end{center}
+\end{figure}
+
+\begin{figure}[!ht]
+\begin{center}
+	\includegraphics[width=0.99\textwidth]{./plots_&_images/1D_N-Jy/01.pdf}
+	\caption{.}
+	\label{fig:1D_N-Jy_01}
+\end{center}
+\end{figure}
+\begin{figure}[!ht]
+\begin{center}
+	\includegraphics[width=0.99\textwidth]{./plots_&_images/1D_N-Jy/02.pdf}
+	\caption{.}
+	\label{fig:1D_N-Jy_02}
+\end{center}
+\end{figure}
+\begin{figure}[!ht]
+\begin{center}
+	\includegraphics[width=0.99\textwidth]{./plots_&_images/1D_N-Jy/03.pdf}
+	\caption{.}
+	\label{fig:1D_N-Jy_03}
+\end{center}
+\end{figure}
+\begin{figure}[!ht]
+\begin{center}
+	\includegraphics[width=0.99\textwidth]{./plots_&_images/1D_N-Jy/04.pdf}
+	\caption{.}
+	\label{fig:1D_N-Jy_04}
+\end{center}
+\end{figure}
+
+\begin{figure}[!ht]
+\begin{center}
+	\includegraphics[width=0.99\textwidth]{./plots_&_images/x-y_N-Vx/01.pdf}
+	\caption{.}
+	\label{fig:x-y_N-Vx_01}
+\end{center}
+\end{figure}
+\begin{figure}[!ht]
+\begin{center}
+	\includegraphics[width=0.99\textwidth]{./plots_&_images/x-y_N-Vx/02.pdf}
+	\caption{.}
+	\label{fig:x-y_N-Vx_02}
+\end{center}
+\end{figure}
+\begin{figure}[!ht]
+\begin{center}
+	\includegraphics[width=0.99\textwidth]{./plots_&_images/x-y_N-Vx/03.pdf}
+	\caption{.}
+	\label{fig:x-y_N-Vx_03}
+\end{center}
+\end{figure}
+\begin{figure}[!ht]
+\begin{center}
+	\includegraphics[width=0.99\textwidth]{./plots_&_images/x-y_N-Vx/04.pdf}
+	\caption{.}
+	\label{fig:x-y_N-Vx_04}
+\end{center}
+\end{figure}
+
+\begin{figure}[!ht]
+\begin{center}
+	\includegraphics[width=0.99\textwidth]{./plots_&_images/x-z_Jy/01.pdf}
+	\caption{.}
+	\label{fig:x-z_Jy_01}
+\end{center}
+\end{figure}
+\begin{figure}[!ht]
+\begin{center}
+	\includegraphics[width=0.99\textwidth]{./plots_&_images/x-z_Jy/02.pdf}
+	\caption{.}
+	\label{fig:x-z_Jy_02}
+\end{center}
+\end{figure}
+\begin{figure}[!ht]
+\begin{center}
+	\includegraphics[width=0.99\textwidth]{./plots_&_images/x-z_Jy/03.pdf}
+	\caption{.}
+	\label{fig:x-z_Jy_03}
+\end{center}
+\end{figure}
+\begin{figure}[!ht]
+\begin{center}
+	\includegraphics[width=0.99\textwidth]{./plots_&_images/x-z_Jy/04.pdf}
+	\caption{.}
+	\label{fig:x-z_Jy_04}
+\end{center}
+\end{figure}
+
+\begin{figure}[!ht]
+\begin{center}
+	\includegraphics[width=0.99\textwidth]{./plots_&_images/x-z_N-Bz_long/01.pdf}
+	\caption{.}
+	\label{fig:x-z_N-Bz_long_01}
+\end{center}
+\end{figure}
+\begin{figure}[!ht]
+\begin{center}
+	\includegraphics[width=0.99\textwidth]{./plots_&_images/x-z_N-Bz_long/02.pdf}
+	\caption{.}
+	\label{fig:x-z_N-Bz_long_02}
+\end{center}
+\end{figure}
+\begin{figure}[!ht]
+\begin{center}
+	\includegraphics[width=0.99\textwidth]{./plots_&_images/x-z_N-Bz_long/03.pdf}
+	\caption{.}
+	\label{fig:x-z_N-Bz_long_03}
+\end{center}
+\end{figure}
+\begin{figure}[!ht]
+\begin{center}
+	\includegraphics[width=0.99\textwidth]{./plots_&_images/x-z_N-Bz_long/04.pdf}
+	\caption{.}
+	\label{fig:x-z_N-Bz_long_04}
+\end{center}
+\end{figure}
+
+\begin{figure}[!ht]
+\begin{center}
+	\includegraphics[width=0.99\textwidth]{./plots_&_images/x-z_N-Bz_short/01.pdf}
+	\caption{.}
+	\label{fig:x-z_N-Bz_short_01}
+\end{center}
+\end{figure}
+\begin{figure}[!ht]
+\begin{center}
+	\includegraphics[width=0.99\textwidth]{./plots_&_images/x-z_N-Bz_short/02.pdf}
+	\caption{.}
+	\label{fig:x-z_N-Bz_short_02}
+\end{center}
+\end{figure}
+\begin{figure}[!ht]
+\begin{center}
+	\includegraphics[width=0.99\textwidth]{./plots_&_images/x-z_N-Bz_short/03.pdf}
+	\caption{.}
+	\label{fig:x-z_N-Bz_short_03}
+\end{center}
+\end{figure}
+\begin{figure}[!ht]
+\begin{center}
+	\includegraphics[width=0.99\textwidth]{./plots_&_images/x-z_N-Bz_short/04.pdf}
+	\caption{.}
+	\label{fig:x-z_N-Bz_short_04}
+\end{center}
+\end{figure}
+
+
+
+
+
+
+
+
+%*************************************************************
+% Typset the bibliography
+%*************************************************************
+\bibliographystyle{./bibliography/agu08} 														% AGU citation style sheet
+\bibliography{./bibliography/bibliography}  													% Master bibliography list
+
+%*************************************************************
+% End the document environment.  
+% No other lines will be read after this point.
+%*************************************************************
+\end{document}

@@ -1,0 +1,23 @@
+  FORMAT OF THE SUBSETTED FILE
+    
+    ITEMS                      FORMAT   
+     
+ 1 Year                          I4        
+ 2 Day                           I4        
+ 3 Hour                          I3        
+ 4 Minute                        I3        
+ 5 Field magnitude average, nT   F8.2      
+ 6 BX, nT (GSE, GSM)             F8.2      
+ 7 BY, nT (GSE)                  F8.2      
+ 8 BZ, nT (GSE)                  F8.2      
+ 9 Speed, km/s                   F8.1      
+10 Vx Velocity,km/s              F8.1      
+11 Vy Velocity, km/s             F8.1      
+12 Vz Velocity, km/s             F8.1      
+13 Proton Density, n/cc          F7.2      
+14 Temperature, K                F9.0      
+15 Flow pressure, nPa            F6.2      
+16 S/C, Xgse,Re                  F8.2      
+17 BSN location, Xgse,Re         F8.2      
+
+This file was produced by SPDF OMNIWeb Plus service
