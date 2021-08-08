@@ -2,7 +2,7 @@
 """
 Created on Thursday March 13 2014
 Magnetopause Location
-@author: Jonathan
+@author: Jillian S. Estrella
 """
 
 #***********************************************************************
@@ -24,7 +24,7 @@ from scipy.interpolate import interp1d
 #***********************************************************************
 def dual_half_circle(center, radius, angle=0, ax=None, colors=('w','k'), **kwargs):
 	"""
-	Add two half circles to the axes *ax* (or the current axes) with the 
+	Add two half circles to the axes *ax* (or the current axes) with the
 	specified facecolors *colors* rotated at *angle* (in degrees).
 	"""
 	if ax is None:
@@ -48,13 +48,13 @@ def plotmovie(x,y,B,D,GOES_X,GOES_Y,GX,GY, Time, i):
 	ax.set_ylim([30,-30])
 	ax.minorticks_on()
 	dual_half_circle((0, 0), radius=1.0, angle=90, ax=ax)
-	
+
 	ax.text(0.2, 0.03,'%s' % Time[i],
 	horizontalalignment = 'center',
 	verticalalignment = 'center',
 	transform = ax.transAxes,
 	fontsize = 14)
-	
+
 	ax.plot(x,y,color='b')
 	ax.plot(GOES_X/6378.1,GOES_Y/6378.1, 'o', color='g')
 	ax.plot(x,-y,color='b')
@@ -114,7 +114,7 @@ def plotrvsBz(r,Bz):
 	ax.set_ylabel('$r [R_{E}]$')
 	#ax.set_xlim([-20,20])
 	#ax.set_ylim([6,12])
-	ax.minorticks_on()	
+	ax.minorticks_on()
 	#ax.plot(Bz, r)
 	for k in range(r[0,:].size):
 		ax.plot(Bz, r[:,k])
@@ -186,10 +186,10 @@ for i in range(1,Time.size):
 Time = np.array([datetime.strptime(s, '%d-%m-%Y %H:%M:%S.%f') for s in Time.view('S23')])
 
 #***********************************************************************
-# Take a 10 minute average of the magnetic field measured by 
-# the spacecraft to smooth out the data. Do the same for position 
-# and time of the soacecraft. Do the same for the IMF. Basically 
-# this will make the data-model comarison easier to comprehend. 
+# Take a 10 minute average of the magnetic field measured by
+# the spacecraft to smooth out the data. Do the same for position
+# and time of the soacecraft. Do the same for the IMF. Basically
+# this will make the data-model comarison easier to comprehend.
 #***********************************************************************
 Bz = np.zeros(Bz_raw.size/10)
 Bz[0] = np.sum(Bz_raw[0:10])/10
@@ -338,7 +338,7 @@ plotGOESBzvsTime(GOES_Bz,Time)
 	verticalalignment = 'center',
 	transform = ax.transAxes,
 	fontsize = 14)
-	
+
 	verts = [
 	(-29.0, 11.40), # left, bottom
 	(-29.0, 11.85), # left, top
@@ -346,14 +346,14 @@ plotGOESBzvsTime(GOES_Bz,Time)
 	(-18.0, 11.40), # right, bottom
 	(0.0, 0.0), # ignored
 	]
-	
+
 	codes = [Path.MOVETO,
 	Path.LINETO,
 	Path.LINETO,
 	Path.LINETO,
 	Path.CLOSEPOLY,
 	]
-	
+
 	path = Path(verts, codes)
 	patch = patches.PathPatch(path, facecolor='white', lw=1)
 	ax.add_patch(patch)

@@ -2,7 +2,7 @@
 """
 Created on Thursday March 13 2014
 Magnetopause Location
-@author: Jonathan
+@author: Jillian S. Estrella
 """
 
 #***********************************************************************
@@ -57,7 +57,7 @@ for k in range(len(Bz)):
 
 	for i in range(nmax):
 		r[:,i,k] = r0[i]*(2/(1 + np.cos(theta[:])))**(alpha[i])
-	
+
 	#***********************************************************************
 	# Convert to Cartesian for plotting.
 	#***********************************************************************

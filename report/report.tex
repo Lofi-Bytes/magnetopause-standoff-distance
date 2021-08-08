@@ -104,7 +104,7 @@
 %*************************************************************
 %\noindent \normalsize{\color{RoyalBlue}{\bf{February 28, 2014}}} \\[0.125cm]
 %\noindent \normalsize{\color{RoyalBlue}{\bf{To: Mike Liemohn}}} \\[0.125cm]
-%\noindent \normalsize{\color{RoyalBlue}{\bf{From: Jonathan Nickerson}}} \\[0.125cm]
+%\noindent \normalsize{\color{RoyalBlue}{\bf{From: Jillian S. Estrella}}} \\[0.125cm]
 %\noindent \normalsize{\color{RoyalBlue}{\bf{RE: Modeling Study \#1}}} \\
 
 %*************************************************************
@@ -112,7 +112,7 @@
 %*************************************************************
 \noindent \large{\color{RoyalBlue}{\bf{Modeling Study \#2: An Empirical Description of Earth's Magnetopause Shape and Location for Real-Time Prediction of Magnetopause Crossings}}} \\[0.0cm]
 \begin{center}
-\normalsize{Jonathan S. Nickerson} \\[0.25cm]
+\normalsize{Jillian S. Estrella} \\[0.25cm]
 \normalsize{March 23, 2014} \\[1cm]
 \end{center}
 
@@ -123,14 +123,14 @@
 \label{sec:introduction}
 Earth has an intrinsic dipole magnetic field emanating from it's core which acts as an obstacle to the flow of the solar wind. The volume of space shielded from the solar wind is called the Earth's \emph{magnetosphere}. As the solar wind approaches Earth's magnetosphere, the flow of the solar wind must slow down in order to be diverted around the magnetospheric obstacle. Because this flow is highly supersonic and superalfv\'{e}nic ($M_{s} = \frac{u_{sw}}{a_{s}} \gtrsim 8$ and $M_{A} = \frac{u_{sw}}{v_{A}} \gtrsim 8$), a strong standing oblique shock wave forms upstream of the magnetosphere. This shock wave is called the \emph{bow shock} (because it resembles the wake created in front of a ships bow). The flow downstream of any oblique shock wave will always turn slightly toward the shock. This is because while the normal component of velocity always decreases across the shock, the tangential component will be conserved. Presumably this behavior consequently aids in redirecting the flow around the obstacle. None the less, the shocked solar wind will continue to flow subsonically toward the Earth's magnetosphere in a region known as the \emph{magnetosheath}. The boundary surface beyond which the shocked solar wind material cannot penetrate is called the \emph{magnetopause}. This is the point at which the solar wind thermal pressure inside of the magnetosheath ($P_{\text{magnetosheath}} = 0.85 \rho _{sw} u^{2}_{sw} \cos ^{2} \phi$) exactly balances the magnetic pressure from Earth's magnetosphere ($P_{B_{\Earth}} = \frac{B^{2}_{\Earth}}{2 \mu _{0}}$) \citep{Cravens97}. Here $\phi$ represents the angle between the direction of the solar wind flow and the normal to the magnetopause. Once inside the magnetosphere, the average densities are lower than those found in the solar wind. In the solar wind, charged particles are flowing away from the sun, along with the interplanetary magnetic field (IMF). Inside of the magnetosphere charged particles are instead guided along Earth's dipole field lines. In contrast to the compressed magnetosphere upwind from the Earth, down wind the dipole field gets stretched far downstream along with the solar wind, giving rise to a \emph{magnetotail}. The global shape and steady state behavior of the magnetosphere is thus analogous to the shape of a paraboloid with the vertex located at the sun-facing subsolar point.
 
-The above discussion is a good starting point for understanding the magnetospause standoff distance. Several empirical models have been proposed to more accurately describe the general shape of the magnetopause as a function of solar wind dynamic pressure, $P_{\text{dyn}}$, and the IMF z-component, $B_{z}$ \citep{Petrinec93} \citep{Shue97} \citep{Shue98} \citep{Kuznetsov98} \citep{Roelof98}. Studies have shown that the \citet {Shue98} model has been the most successful at describing the shape of the magnetopause \citep{Shue00}. For this reason I used this model for my study. 
+The above discussion is a good starting point for understanding the magnetospause standoff distance. Several empirical models have been proposed to more accurately describe the general shape of the magnetopause as a function of solar wind dynamic pressure, $P_{\text{dyn}}$, and the IMF z-component, $B_{z}$ \citep{Petrinec93} \citep{Shue97} \citep{Shue98} \citep{Kuznetsov98} \citep{Roelof98}. Studies have shown that the \citet {Shue98} model has been the most successful at describing the shape of the magnetopause \citep{Shue00}. For this reason I used this model for my study.
 
 %*************************************************************
 % Begin a new section.
 %*************************************************************
 \section{Summary of the Model}
-\label{sec:summary} 
-The model first proposed by \citet{Shue97} is given as 
+\label{sec:summary}
+The model first proposed by \citet{Shue97} is given as
 \begin{equation}
 r = r_{0} \left( \frac{2}{1 + \cos \theta } \right) ^{\alpha}
 \end{equation}
@@ -139,7 +139,7 @@ where $r_{0}$ and $\alpha$ are the standoff distance and the level of tail flari
  r_{0} =
   \begin{cases}
    \left( 11.4 + 0.013 B_{z} \right) P_{\text{dyn}}^{-\frac{1}{6.6}} & \text{for} B_{z} \vargeq 0 \\
-   \left( 11.4 + 0.14 B_{z} \right) P_{\text{dyn}}^{-\frac{1}{6.6}} & \text{for} B_{z} < 0 
+   \left( 11.4 + 0.14 B_{z} \right) P_{\text{dyn}}^{-\frac{1}{6.6}} & \text{for} B_{z} < 0
   \end{cases}
 \end{equation}
 \begin{equation}
@@ -152,7 +152,7 @@ r_{0} = \lbrace 10.22 + 1.29 \tanh \left[ 0.184 \left( B_{z} + 8.14 \right) \rig
 \begin{equation}
 \alpha = \left( 0.58 - 0.007 B_{z} \right) \left[ 1 + 0.024 \log \left( P_{\text{dyn}} \right ) \right].
 \end{equation}
-In my study I used the \citet{Shue98} revised model. To understand the model response to upstream solar wind conditions I did a sensitivity study. I then proceeded with a data-model comparison to test the model's ability to predict magnetopause crossings of the GOES 10 satellite. 
+In my study I used the \citet{Shue98} revised model. To understand the model response to upstream solar wind conditions I did a sensitivity study. I then proceeded with a data-model comparison to test the model's ability to predict magnetopause crossings of the GOES 10 satellite.
 
 %*************************************************************
 % Begin a new section.
@@ -160,10 +160,10 @@ In my study I used the \citet{Shue98} revised model. To understand the model res
 \section{Sensitivity Study}
 \label{sec:sensitivity}
 \subsection{Methodology}
-The Shue model relies on only two input parameters, $P_{\text{dyn}}$ and $B_{z}$. To characterize the general behavior of the model I investigated how the model responds to both of these parameters. To do accomplish this I varied one of the parameters while holding the other constant, and vice versa. 
+The Shue model relies on only two input parameters, $P_{\text{dyn}}$ and $B_{z}$. To characterize the general behavior of the model I investigated how the model responds to both of these parameters. To do accomplish this I varied one of the parameters while holding the other constant, and vice versa.
 
 \subsection{Results}
-\textcolor{RoyalBlue}{Figure \ref{fig:sens_magnetopause}} (\textcolor{RoyalBlue}{Appendix \ref{sec:B}}) shows the cross section of the magnetopause demonstrating shape and location sensitivity to $B_{z}$ while holding $P_{\text{dyn}}$ constant and vice versa. We can see that a southward IMF pushes the magnetopause inward and causes the tail to flare. As $B_{z}$ becomes more negative, the pushing and flaring become more dramatic. In contrast, a northward IMF causes pinching of the tail with increasing strength but does little to push the magnetopause inward. Increasing solar wind pressure pushes the magnetopause inward without flaring or pinching. I would like to note that by increasing $P_{\text{dyn}}$ to unreasonably large values, the magnetopause continues to push inward until it no longer represents a configuration that we would expect to find in reality. In this extreme case the shape of $r$ becomes that of an ellipsoid that eventually vanishes inside of 1 R$_{\Earth}$. The affect that $B_{z}$ has on the magnetopause location for a range of $P_{\text{dyn}}$ is summed up in \textcolor{RoyalBlue}{Figure \ref{fig:sens}}. Plotting $r$ as a function of $B_{z}$. Varying $P_{\text{dyn}}$ from $9 \left[ \text{nPa} \right]$ to $34 \left[ \text{nPa} \right]$ in even intervals. We see the effect that a southward IMF has on pushing the magnetopause inside of geosynchronous orbit (denoted by the dotted line) for a given $P_{\text{dyn}}$. In a similar approach, varying $B_{z}$ from $-60 \left[ nT \right]$ to $60 \left[ nT \right]$ in 50 evenly spaced increments we see the range of $P_{\text{dyn}}$ required for a given value of $B_{z}$ to push the magnetopause inside of geosynchronous orbit. 
+\textcolor{RoyalBlue}{Figure \ref{fig:sens_magnetopause}} (\textcolor{RoyalBlue}{Appendix \ref{sec:B}}) shows the cross section of the magnetopause demonstrating shape and location sensitivity to $B_{z}$ while holding $P_{\text{dyn}}$ constant and vice versa. We can see that a southward IMF pushes the magnetopause inward and causes the tail to flare. As $B_{z}$ becomes more negative, the pushing and flaring become more dramatic. In contrast, a northward IMF causes pinching of the tail with increasing strength but does little to push the magnetopause inward. Increasing solar wind pressure pushes the magnetopause inward without flaring or pinching. I would like to note that by increasing $P_{\text{dyn}}$ to unreasonably large values, the magnetopause continues to push inward until it no longer represents a configuration that we would expect to find in reality. In this extreme case the shape of $r$ becomes that of an ellipsoid that eventually vanishes inside of 1 R$_{\Earth}$. The affect that $B_{z}$ has on the magnetopause location for a range of $P_{\text{dyn}}$ is summed up in \textcolor{RoyalBlue}{Figure \ref{fig:sens}}. Plotting $r$ as a function of $B_{z}$. Varying $P_{\text{dyn}}$ from $9 \left[ \text{nPa} \right]$ to $34 \left[ \text{nPa} \right]$ in even intervals. We see the effect that a southward IMF has on pushing the magnetopause inside of geosynchronous orbit (denoted by the dotted line) for a given $P_{\text{dyn}}$. In a similar approach, varying $B_{z}$ from $-60 \left[ nT \right]$ to $60 \left[ nT \right]$ in 50 evenly spaced increments we see the range of $P_{\text{dyn}}$ required for a given value of $B_{z}$ to push the magnetopause inside of geosynchronous orbit.
 
 %*************************************************************
 % Begin a new section.
@@ -171,27 +171,27 @@ The Shue model relies on only two input parameters, $P_{\text{dyn}}$ and $B_{z}$
 \section{Data-Model Comparison}
 \label{sec:data-model}
 \subsection{Methodology}
-It is commonly believed that one advantage to empirical models is that because they are computationally inexpensive and quick to calculate they are ideal for real time forecasting. A primary goal of this study is to determine if this model can be used in conjunction with upstream solar wind conditions measured by the Advanced Composition Explorer (ACE) spacecraft to reliably predict real-time magnetopause crossings for the Geostationary Satellite System (GOES) 10 satellite. 
+It is commonly believed that one advantage to empirical models is that because they are computationally inexpensive and quick to calculate they are ideal for real time forecasting. A primary goal of this study is to determine if this model can be used in conjunction with upstream solar wind conditions measured by the Advanced Composition Explorer (ACE) spacecraft to reliably predict real-time magnetopause crossings for the Geostationary Satellite System (GOES) 10 satellite.
 
 The ACE spacecraft is located at the L2 Lagrange point ($\sim 235 R_{\Earth}$ upstream). At typical solar wind speeds it takes about an hour for the solar wind to propagate to the Earth from ACE's position. Solar wind ACE data has been processed and prepropagated and made available online at OMNIWeb, which is hosted by NASA. I obtained the input data for my study here.
 
-GOES 10 sits in geosynchronous orbit at $\sim 6.6 R_{\Earth}$. Under adequately strong upstream solar wind conditions the magnetopause can be pushed inside of $\sim 6.6 R_{\Earth}$. When this happens, provided GOES 10 is on the day side of Earth, GOES 10 will experience a magnetopause crossing. A crossing will manifest itself in the GOES 10 $B_{z}$ magnetometer measurement as an abrupt reversal of the $B_{z}$ magnetic field from strongly positive to strongly negative (\textcolor{RoyalBlue}{Figure \ref{fig:GOES_Bz}}). GOES 10 data for this study was obtained from CDAWeb, also hosted by NASA. 
+GOES 10 sits in geosynchronous orbit at $\sim 6.6 R_{\Earth}$. Under adequately strong upstream solar wind conditions the magnetopause can be pushed inside of $\sim 6.6 R_{\Earth}$. When this happens, provided GOES 10 is on the day side of Earth, GOES 10 will experience a magnetopause crossing. A crossing will manifest itself in the GOES 10 $B_{z}$ magnetometer measurement as an abrupt reversal of the $B_{z}$ magnetic field from strongly positive to strongly negative (\textcolor{RoyalBlue}{Figure \ref{fig:GOES_Bz}}). GOES 10 data for this study was obtained from CDAWeb, also hosted by NASA.
 
-GOES 10 measured magnetopause crossings on the following five dates: 
+GOES 10 measured magnetopause crossings on the following five dates:
 \begin{inparaenum}[$\cdot$]
   \item Sep 23, 1999
   \item Apr 07, 2000
   \item Sep 18, 2000
   \item Mar 31, 2001
   \item Apr 12, 2001.
-\end{inparaenum} 
+\end{inparaenum}
 I compared the models cumulative predictive capabilities ranging over these five events. For each of the events I took a 10-minute running average (\textcolor{RoyalBlue}{Figure \ref{fig:GOES_Bz}}). This allowed for cleaning up the signal to separate the noise/fluctuations from the physically meaningful data.
 
 \subsection{Results}
 The result of the data-model comparison can be visualized in \textcolor{RoyalBlue}{Figure \ref{fig:movie}}. Looking down from the north pole of the Earth, we can see the position of GOES 10 as it orbits the Earth projected into the x-y plane. The predicted position of the magnetopause is also shown. Through the sequence we can see a predicted magnetopause crossing. For a more thorough visualization of the result please follow the link to a movie of the sequence. While the result looks pretty good, it isn't meaningful without comparing the predicted crossings to the model to the actual measurement taken by GOES 10.
 
 \subsection{Analysis}
-The best way to analyze the quality of a predictive model of this kind is to build a \emph{contingency table}. The contingency table allows for comparison of the state of the model to the state of the data. Because the data was \enquote{binned} into 10 minute intervals, each of the five events had a total of 288 frames. The contingency table, shown in \textcolor{RoyalBlue}{Appendix \ref{sec:A}}, is for all five events combined. A \enquote{hit}, denoted as (H), is when the model and the data both indicate that the satellite is outside of the magnetopause. A \enquote{miss}, denoted as (M), is when the data shows that GOES 10 is outside of the magnetopause but the model thinks it should be inside. A \enquote{false alarm}, denoted as (F), indicates when the data shows the satellite inside of the magnetopause and the data shows it outside. Lastly a \enquote{correct negative}, denoted as (N), is when both the data and the model indicate that the satellite should be inside of the magnetopause. The corresponding values are the number of times each of these criteria were met across all five events. Because the satellite spends most of its time inside the magnetopause in the dusk, midnight, and dawn sectors we would expect N to be the largest value. 
+The best way to analyze the quality of a predictive model of this kind is to build a \emph{contingency table}. The contingency table allows for comparison of the state of the model to the state of the data. Because the data was \enquote{binned} into 10 minute intervals, each of the five events had a total of 288 frames. The contingency table, shown in \textcolor{RoyalBlue}{Appendix \ref{sec:A}}, is for all five events combined. A \enquote{hit}, denoted as (H), is when the model and the data both indicate that the satellite is outside of the magnetopause. A \enquote{miss}, denoted as (M), is when the data shows that GOES 10 is outside of the magnetopause but the model thinks it should be inside. A \enquote{false alarm}, denoted as (F), indicates when the data shows the satellite inside of the magnetopause and the data shows it outside. Lastly a \enquote{correct negative}, denoted as (N), is when both the data and the model indicate that the satellite should be inside of the magnetopause. The corresponding values are the number of times each of these criteria were met across all five events. Because the satellite spends most of its time inside the magnetopause in the dusk, midnight, and dawn sectors we would expect N to be the largest value.
 
 The contingency table allows us to do some basic statistical analysis to get a feel for how \enquote{good} the model is. We can calculate the probability of detection (POD), which is the probability that the model will detect a correct magnetopause crossing as follows
 \begin{eqnarray}
@@ -199,7 +199,7 @@ The contingency table allows us to do some basic statistical analysis to get a f
 & & \nonumber \\
 & = & 49.52 \%
 \end{eqnarray}
-For this study I found $\text{POD} = 49.52\%$. This may seem low but I think it is pretty good considering the many factors that could fudge the result. I think that for any predictive model, this is the range one might could expect. One thing that lowered this score is that while the model predicted that there would be a crossing every time that one happened, it did not predict all events during the time interval in which they actually happened. There was no specific pattern to the offsetting of the models predictive capability. If so we might expect that we could time-shift our input data to better match the result (for example if there is a lag in the propagation of ACE data). Perhaps for this model, a 10-minute running average might be too small of a bin size. Increasing the bin size would definitely drive up its apparent predictive capabilities, but one must tread carefully here. Doing so might very well wash out the usefulness of the model. 
+For this study I found $\text{POD} = 49.52\%$. This may seem low but I think it is pretty good considering the many factors that could fudge the result. I think that for any predictive model, this is the range one might could expect. One thing that lowered this score is that while the model predicted that there would be a crossing every time that one happened, it did not predict all events during the time interval in which they actually happened. There was no specific pattern to the offsetting of the models predictive capability. If so we might expect that we could time-shift our input data to better match the result (for example if there is a lag in the propagation of ACE data). Perhaps for this model, a 10-minute running average might be too small of a bin size. Increasing the bin size would definitely drive up its apparent predictive capabilities, but one must tread carefully here. Doing so might very well wash out the usefulness of the model.
 
 Next we can look at the probability of false detection as follows
 \begin{eqnarray}
@@ -289,7 +289,7 @@ Data: Inside Magnetopause & F: 12 & N: 1323 \\
    & \subfloat[]{\includegraphics[width=0.49\textwidth]{./plots_&_images/data-model_comparison/GOES_BzvsTime.pdf}}\\
 \end{tabular}
 \end{tabularx}
-\caption{a) Plotting GOES $B_{z}$ magnetometer data vs Time for the event of Sep 23, 1999. For a crossing we expect a strong northward $B_{z}$ component followed by a sudden reversal to a strong southward $B_{z}$ component. Indeed this is precisely what we see. b) The same interval after taking a 10-minute running average of the signal. The data is cleaned up significantly separating the noise from the physically meaningful data.} 
+\caption{a) Plotting GOES $B_{z}$ magnetometer data vs Time for the event of Sep 23, 1999. For a crossing we expect a strong northward $B_{z}$ component followed by a sudden reversal to a strong southward $B_{z}$ component. Indeed this is precisely what we see. b) The same interval after taking a 10-minute running average of the signal. The data is cleaned up significantly separating the noise from the physically meaningful data.}
 \label{fig:GOES_Bz}
 \end{figure}
 
@@ -298,9 +298,9 @@ Data: Inside Magnetopause & F: 12 & N: 1323 \\
 \def\tabularxcolumn#1{m{#1}}
 \begin{tabularx}{\linewidth}{@{}cXX@{}}
 \begin{tabular}{cc}
-\subfloat[]{\includegraphics[width=0.49\textwidth]{./plots_&_images/data-model_comparison/112.pdf}} 
+\subfloat[]{\includegraphics[width=0.49\textwidth]{./plots_&_images/data-model_comparison/112.pdf}}
    & \subfloat[]{\includegraphics[width=0.49\textwidth]{./plots_&_images/data-model_comparison/123.pdf}}\\
-\subfloat[]{\includegraphics[width=0.49\textwidth]{./plots_&_images/data-model_comparison/131.pdf}} 
+\subfloat[]{\includegraphics[width=0.49\textwidth]{./plots_&_images/data-model_comparison/131.pdf}}
    & \subfloat[]{\includegraphics[width=0.49\textwidth]{./plots_&_images/data-model_comparison/139.pdf}}\\
 \end{tabular}
 \end{tabularx}
@@ -316,7 +316,7 @@ Data: Inside Magnetopause & F: 12 & N: 1323 \\
 \bibliography{./bibliography/bibliography}  													% Master bibliography list
 
 %*************************************************************
-% End the document environment.  
+% End the document environment.
 % No other lines will be read after this point.
 %*************************************************************
 \end{document}

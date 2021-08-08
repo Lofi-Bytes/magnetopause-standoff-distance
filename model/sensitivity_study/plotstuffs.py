@@ -2,7 +2,7 @@
 """
 Created on Thursday March 13 2014
 Magnetopause Location
-@author: Jonathan
+@author: Jillian S. Estrella
 """
 
 #***********************************************************************
@@ -22,7 +22,7 @@ from matplotlib.path import Path
 #***********************************************************************
 def dual_half_circle(center, radius, angle=0, ax=None, colors=('w','k'), **kwargs):
 	"""
-	Add two half circles to the axes *ax* (or the current axes) with the 
+	Add two half circles to the axes *ax* (or the current axes) with the
 	specified facecolors *colors* rotated at *angle* (in degrees).
 	"""
 	if ax is None:
@@ -91,7 +91,7 @@ def plotrvsBz(r,Bz):
 	verticalalignment = 'center',
 	transform = ax.transAxes,
 	fontsize = 14)
-	
+
 	verts = [
 	(-29.0, 11.40), # left, bottom
 	(-29.0, 11.85), # left, top
@@ -99,14 +99,14 @@ def plotrvsBz(r,Bz):
 	(-18.0, 11.40), # right, bottom
 	(0.0, 0.0), # ignored
 	]
-	
+
 	codes = [Path.MOVETO,
 	Path.LINETO,
 	Path.LINETO,
 	Path.LINETO,
 	Path.CLOSEPOLY,
 	]
-	
+
 	path = Path(verts, codes)
 	patch = patches.PathPatch(path, facecolor='white', lw=1)
 	ax.add_patch(patch)

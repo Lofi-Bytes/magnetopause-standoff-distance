@@ -2,7 +2,7 @@
 """
 Created on Thursday March 13 2014
 Magnetopause Location
-@author: Jonathan
+@author: Jillian S. Estrella
 """
 
 #***********************************************************************
@@ -20,7 +20,7 @@ from scipy.interpolate import interp1d
 reload(ps)
 
 #***********************************************************************
-# Read Bz, Dp, and GOES data from file. 
+# Read Bz, Dp, and GOES data from file.
 # Interpolate the bugs.
 #***********************************************************************
 Bz_raw = np.genfromtxt('./omni_min_26813.lst.txt', delimiter="", usecols = (4), dtype=float, autostrip=True)
@@ -59,10 +59,10 @@ Time = np.array([datetime.strptime(s, '%d-%m-%Y %H:%M:%S.%f') for s in Time.view
 Time_raw = np.array([datetime.strptime(s, '%d-%m-%Y %H:%M:%S.%f') for s in Time_raw.view('S23')])
 
 #***********************************************************************
-# Take a 10 minute average of the magnetic field measured by 
-# the spacecraft to smooth out the data. Do the same for GOES_Rition 
-# and time of the soacecraft. Do the same for the IMF. Basically 
-# this will make the data-model comarison easier to comprehend. 
+# Take a 10 minute average of the magnetic field measured by
+# the spacecraft to smooth out the data. Do the same for GOES_Rition
+# and time of the soacecraft. Do the same for the IMF. Basically
+# this will make the data-model comarison easier to comprehend.
 #***********************************************************************
 Bz = np.zeros(Bz_raw.size/10)
 Bz[0] = np.sum(Bz_raw[0:10])/10
@@ -126,7 +126,7 @@ for i in range(nmax):
 	y[:,i] = r[:,i]*np.sin(theta[:])
 
 #***********************************************************************
-# Find where the data says the magnetopause crossing is. 
+# Find where the data says the magnetopause crossing is.
 # Save the result in an array of 1's and 2's.
 #***********************************************************************
 measured_crossings = np.zeros(len(GOES_Bz))
@@ -138,10 +138,10 @@ for i in range(len(GOES_Bz)):
 		measured_crossings[i] = 1
 
 #***********************************************************************
-# Find "theta_GOES" - the angle the spacecraft is at in the same 
+# Find "theta_GOES" - the angle the spacecraft is at in the same
 # "theta" coordiante used to define the magnetopause in the Shue model.
 #
-# Using theta_GOES, find where the model says the magnetopause 
+# Using theta_GOES, find where the model says the magnetopause
 # crossing is. Save the result in an array of 10's and 100's.
 #***********************************************************************
 theta_GOES = np.zeros(len(GOES_Y))
@@ -162,11 +162,11 @@ for i in range(len(GOES_R)):
 		predicted_crossings[i] = 10
 
 #***********************************************************************
-# To build the contingency table. Multiply measured_crossings 
+# To build the contingency table. Multiply measured_crossings
 # with predicted_crossings. Values in the result will give one of
-# four unique numbers. Each of which corresponds to a hit, miss, 
+# four unique numbers. Each of which corresponds to a hit, miss,
 # false alarm, or correct negative. In the contingency table.
-# Store the total number of hits, misses, fa's, and cn's and 
+# Store the total number of hits, misses, fa's, and cn's and
 # print them.
 #***********************************************************************
 contingency_table = measured_crossings*predicted_crossings

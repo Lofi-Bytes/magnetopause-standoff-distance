@@ -2,7 +2,7 @@
 """
 Created on Thursday March 13 2014
 Magnetopause Location
-@author: Jonathan
+@author: Jillian S. Estrella
 """
 
 #***********************************************************************
@@ -21,13 +21,13 @@ from scipy.interpolate import interp1d
 #***********************************************************************
 # Hey, JNick.
 
-# Here's a way easier idea.  You have a time array, "T", and a data array, 
-# "data".  data has an arbitrary number of bad data points.  It looks like 
-# you're trying to interpolate using the good points to fill in the bad points. 
-# That makes sense, but many nested "if" statements is not a good way to do it 
-# because it is not arbitrarily robust- you are basically defining the depth 
-# to which you'll search for the nearest good neighbors.  If you "sound out" 
-# what you're doing (spell it out in English) and do so for an arbitrary case, 
+# Here's a way easier idea.  You have a time array, "T", and a data array,
+# "data".  data has an arbitrary number of bad data points.  It looks like
+# you're trying to interpolate using the good points to fill in the bad points.
+# That makes sense, but many nested "if" statements is not a good way to do it
+# because it is not arbitrarily robust- you are basically defining the depth
+# to which you'll search for the nearest good neighbors.  If you "sound out"
+# what you're doing (spell it out in English) and do so for an arbitrary case,
 # you'll see there are several solutions.  However, this would be the easiest:
 
 time = np.linspace(0, 100, 100)
